@@ -7,8 +7,7 @@ import com.codingelab.validation.languages.Translator;
  * This interface has the logic of how to validate the data entry, find out the errors in the given input,
  * and it also responsible for fixing input.
  * @author Abdulrahman Abdulhamid Alsaedi
- * @since 31 January 2017
- * @version 1.0.1
+ * @since 1.0.1
  */
 public interface Valid<T>{
 	/**

@@ -16,7 +16,7 @@ import com.codingelab.validation.languages.Translator;
  * to an interface which is called {@link Valid}
  * @param <T> the object which you will validate
  * @author Abdulrahman Abdulhamid Alsaedi
- * @version 1.0.1
+ * @since 1.0.1
  */
 public abstract class Validation<T> {
 	private static final String version="Codingelab Validation 1.0.1";
@@ -42,21 +42,27 @@ public abstract class Validation<T> {
 	/**
 	 * By extending this class, this abstract method may or may not give the clients of this API library the ability to 
 	 * change the behaviour of data entry validation at run-time based on the implementation detail. For example:<br/>
-	 * 1- if you want to give the client the ability to change the behaviour of data entry validation at run-time then
-	 * delegate the task of setting the valid object to {@link #setValidValue(Valid)} method like in the
-	 * following codes:
+	 * <ul>
+	 * 		<li> 
+	 * 			If you want to give the client the ability to change the behaviour of data entry validation at run-time then
+	 * 			delegate the task of setting the valid object to {@link #setValidValue(Valid)} method like in the
+	 * 			following codes:
 	 * <pre>
 	 * public void setValid(final Valid<T> valid){
 	 *    super.setValidValue(valid);
 	 * }
 	 * </pre>
-	 * 2- If you want to prevent the client from changing the behaviour at run-time then do not delegate the task 
-	 * as shown in the following codes: 
+	 * 		</li>
+	 * 		<li> 
+	 * 			If you want to prevent the client from changing the behaviour at run-time then do not delegate the task 
+	 * 			as shown in the following codes: 
 	 * <pre>
 	 * public void setValid(final Valid<T> valid){
 	 *    // leave this method empty.
 	 * }
 	 * </pre>
+	 * 		</li>
+	 * </ul>
 	 * @param valid has the logic of how to validate the data entry and how to fix the errors if there is an error.
 	 */
 	public abstract void setValid(final Valid<T> valid);
@@ -186,7 +192,7 @@ public abstract class Validation<T> {
 	}
 	/**
 	 * This method knows how to find the errors in the given input and translates these errors into readable language.
-	 * @return String which tells what are the errors 
+	 * @return the errors into readable language if there
 	 */
 	public final String getErrors(){
 		return getErrors(null);
@@ -194,7 +200,7 @@ public abstract class Validation<T> {
 	/**
 	 * This method knows how to find the errors in the given input and translates these errors into readable language.
 	 * @param errorName allows you to change the language variable if and only if the current language support it.
-	 * @return String which tells what are the errors if there are errors.
+	 * @return the errors into readable language if there
 	 */
 	public final String getErrors(String errorName){
 		this.isEventActive=false;

@@ -26,14 +26,14 @@ import com.codingelab.validation.valid.strategy.decorator.regex.WhiteSpaces;
 import com.codingelab.validation.valid.strategy.decorator.regex._Regex;
 
 /**
- * Validator is a factory that knows how to instantiate the right object properly. All of the objects which will
- * be instantiated via this factory will display the error notifications in English language since it is the default language
- * of the API library. However, to change the default language of all the object which will be instantiate in the 
- * future via this factory use one of these methods: 
+ * Validator is a factory that knows how to instantiate that knows how to validat the data entries.
+ * All of the objects which will be instantiated via this factory will display the error notifications 
+ * in English language since it is the default language of the API library. However, to change the default 
+ * language of all the object which will be instantiate in the future via this factory use one of these methods: 
  * <br/>{@link Validator#selectLanguage(Lang lang)} or
  * <br/>{@link Validator#setLanguage(Lang lang)}
  * @author Abdulrahman Abdulhamid Alsaedi
- * @version 1.0.1
+ * @since 1.0.1
  */
 public class Validator {
 	private static Language language;
@@ -77,26 +77,33 @@ public class Validator {
 	/**
 	 * This method decorates the given regexes with each other and returns an object that knows how
 	 * to validate the input
-	 * @param regexs an array of type Regex that represent how the valid input should look like.
+	 * @param regexs an array of type Regex that represents how the valid input should look like.
 	 * @return StringValidation which knows how to validate the input based on the given regexes
 	 * @throws NullPointerException if a null value was passed to the argument like Validator.decorate(null) or <br/>
 	 * in case the array of type Regex has a null value like:<br/>
 	 * Regex [] regexes={Regex.letters(),null,Regex.numbers()};<br/>
 	 * Validator.decorate(regexes);
 	 * @throws EmptyArrayException if nothing was passed to the argument like:<br/>
-	 * 1- Validator.decorate();<br/>
-	 * 2- Passing an empty array like:
+	 * <ul>
+	 * 		<li>Validator.decorate();</li>
+	 * 		<li>
+	 * 		Passing an empty array like:
 	 * <pre>
 	 *   Regex [] regexs={};
 	 *   Validator.decorate(regexs);
 	 * </pre>
+	 * 		</li>
+	 * </ul>
+	 * 
 	 * @throws InvalidRange if you pass invalid <b>character</b> or <b>range</b> in one of the components 
 	 * which accept range of characters<br>
 	 * For example: <br>
-	 * 1- Validator.decorate(Regex.lettersInRange("<b>2</b>ae")); lettersInRange cannot contain number<br/>
-	 * 2- Validator.decorate(Regex.numbersOutRange("<b>#</b>12")); numberOutRange cannot contain special characters.<br/>
-	 * 3- Validator.decorate(Regex.lettersOutRange("<b>a-b-c</b>")); it should be Regex.lettersOutRange("<b>a-c</b>");<br/>
-	 * 4- Validator.decorate(Regex.numbersInRange("<b>0-1-2</b>")); it should be Regex.numberInRange("<b>0-2</b>");
+	 * <ul>
+	 * 		<li>Validator.decorate(Regex.lettersInRange("<b>2</b>ae")); lettersInRange cannot contain number.</li>
+	 * 		<li>Validator.decorate(Regex.numbersOutRange("<b>#</b>12")); numberOutRange cannot contain special characters.</li>
+	 * 		<li>Validator.decorate(Regex.lettersOutRange("<b>a-b-c</b>")); it should be Regex.lettersOutRange("<b>a-c</b>");</li>
+	 * 		<li>Validator.decorate(Regex.numbersInRange("<b>0-1-2</b>")); it should be Regex.numberInRange("<b>0-2</b>");</li>
+	 * </ul>
 	 * @throws EmptyRange if the given range was empty. For example, Validator.decorate(Regex.lettersInRange(<b>""</b>));
 	 * @throws NullRange if the given range was null. For example, Validator.decorate(Regex.numbersInRange(<b>null</b>));
 	 * 
@@ -162,13 +169,15 @@ public class Validator {
 	 * getEmail() is a predefined component<br/>
 	 * This method returns an object of type Validation which knows how to validate the email address.</br>
 	 * The rules of valid email is:</br>
-	 * 1- Email name consist of letters, numbers, dot, underscore, and hyphen.</br>
-	 * 2- Email name start with letter or number like <b>2</b>omar or <b>o</b>mar2</br>
-	 * 3- Email name cannot end with dot. Example: <b>omar.</b> is wrong while <b>omar.e</b> is correct.</br> 
-	 * 4- Each email contains only one @ . Like, <b>name@</b></br>
-	 * 5- Domain name consist only of letters and number. like, omar@<b>gmail</b></br>
-	 * 6- Each email contains top level domain (TLD). like, omar@gmail<b>.com</b></br>
-	 * 7- Each email may or may not contains sub-level domain. Like, omar@gmail.com<b>.sa</b>
+	 * <ul>
+	 * 		<li>Email name consist of letters, numbers, dot, underscore, and hyphen.</li>
+	 * 		<li>Email name start with letter or number like <b>2</b>omar or <b>o</b>mar2.</li>
+	 * 		<li>Email name cannot end with dot. Example: <b>omar.</b> is wrong while <b>omar.e</b> is correct.</li>
+	 * 		<li>Each email contains only one @ Like <b>name@</b></li>
+	 * 		<li>Domain name consist only of letters and number like omar@<b>gmail</b></li>
+	 * 		<li>Each email contains top level domain (TLD) like omar@gmail<b>.com</b></li>
+	 * 		<li>Each email may or may not contains sub-level domain like omar@gmail.com<b>.sa</b></li>
+	 * </ul>
 	 * @return Validation object that knows to validate an input(entry) that is representing an email.
 	 */
 	public static StringValidation getEmail(){
@@ -190,8 +199,10 @@ public class Validator {
 	/**
 	 * getName() is a predefined component<br/>
 	 * This method knows how to validate name. The rule of valid name are:<br>
-	 * 1- Has at least two letters.<br/>
-	 * 2- Name can have spaces (To support the concept of the first and the last name).<br/>
+	 * <ul>
+	 * 		<li>Has at least two letters.</li>
+	 * 		<li>Name can have spaces (To support the concept of the first and the last name).</li>
+	 * </ul>
 	 * This method is equal to: 
 	 * <pre>
 	 * try {
@@ -208,9 +219,11 @@ public class Validator {
 	/**
 	 * getName() is a predefined component<br/>
 	 * This method knows how to validate username. The rule of valid username are:<br>
-	 * 1- Username only consists of letters and numbers.<br/>
-	 * 2- Username has to be more than 3 characters.<br/>
-	 * 3- Username has to be less than 17 characters<br/>
+	 * <ul>
+	 * 		<li>Username only consists of letters and numbers.</li>
+	 * 		<li>Username has to be more than 3 characters.</li>
+	 * 		<li>Username has to be less than 17 characters.</li>
+	 * </ul>
 	 * This method is equal to:<br/>
 	 *<pre>
 	 *try{
@@ -232,11 +245,13 @@ public class Validator {
 	/**
 	 * getPassword() is a predefined component<br/>
 	 * This method knows how to validate password. The rule of valid password are:<br>
-	 * 1- Password cannot have tabs, enters, and vertical spaces.<br/>
-	 * 2- Password must have at least 2 letters.<br/>
-	 * 3- Password must have at least 2 numbers.<br/>
-	 * 4- Password must have at least 2 special characters.<br/>
-	 * 5- Password consist of 8 characters at least.<br/>
+	 * <ul>
+	 * 		<li>Password cannot have tabs, enters, and vertical spaces.</li>
+	 * 		<li>Password must have at least 2 letters.</li>
+	 * 		<li>Password must have at least 2 numbers.</li>
+	 * 		<li>Password must have at least 2 special characters.</li>
+	 * 		<li>Password consist of 8 characters at least.</li>
+	 * </ul>
 	 * This method is equal to:<br/>
 	 *<pre>
 	 *try{
