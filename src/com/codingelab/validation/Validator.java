@@ -222,6 +222,7 @@ public class Validator {
 	 */
 	public static StringValidation getUsername(){
 		try{
+			// TODO Fix the username (letterInRange:English letters only + numberInRange:0-9)
 			StringValidation validation=Validator.decorate(Regex.letters(),Regex.numbers());
 			validation.setLengthBetween(4, 16);
 			return validation;
