@@ -1,4 +1,4 @@
-package com.codingelab.validation.translator;
+package com.codingelab.validation.languages;
 
 import com.codingelab.validation.Validation;
 import com.codingelab.validation.errors.Error;

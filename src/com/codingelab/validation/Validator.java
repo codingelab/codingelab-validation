@@ -1,14 +1,14 @@
 package com.codingelab.validation;
 
 import com.codingelab.validation.exceptions.EmptyArrayException;
+import com.codingelab.validation.languages.Lang;
+import com.codingelab.validation.languages.Language;
+import com.codingelab.validation.languages.LanguageFactory;
 import com.codingelab.validation.strategy.files.FileValidation;
 import com.codingelab.validation.strategy.strings.ClientValidation;
 import com.codingelab.validation.strategy.strings.DecorateValidation;
 import com.codingelab.validation.strategy.strings.EmailValidation;
 import com.codingelab.validation.strategy.strings.StringValidation;
-import com.codingelab.validation.translator.Lang;
-import com.codingelab.validation.translator.Language;
-import com.codingelab.validation.translator.LanguageFactory;
 import com.codingelab.validation.valid.strategy.decorator.regex.Letters;
 import com.codingelab.validation.valid.strategy.decorator.regex.LettersInRange;
 import com.codingelab.validation.valid.strategy.decorator.regex.LettersOutRange;

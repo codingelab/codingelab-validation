@@ -7,10 +7,10 @@ import com.codingelab.validation.errors.EmptyInput;
 import com.codingelab.validation.errors.Error;
 import com.codingelab.validation.errors.NoError;
 import com.codingelab.validation.event.Event;
-import com.codingelab.validation.translator.Lang;
-import com.codingelab.validation.translator.Language;
-import com.codingelab.validation.translator.LanguageFactory;
-import com.codingelab.validation.translator.Translator;
+import com.codingelab.validation.languages.Lang;
+import com.codingelab.validation.languages.Language;
+import com.codingelab.validation.languages.LanguageFactory;
+import com.codingelab.validation.languages.Translator;
 /*
  * @author Abdulrahman Abdulhamid Alsaedi
  * @version 1.0.1

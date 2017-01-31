@@ -1,4 +1,4 @@
-package com.codingelab.validation.translator;
+package com.codingelab.validation.languages;
 /*
  * @author Abdulrahman Abdulhamid Alsaedi
  * @version 1.0.1
