@@ -6,7 +6,7 @@ import com.codingelab.validation.errors.ErrorType;
  * @author Abdulrahman Abdulhamid Alsaedi
  * @version 1.0.1
  */
-public class German implements Language{
+class German implements Language{
 	
 	@Override
 	public String getVariable() {

@@ -1,11 +1,11 @@
 package com.codingelab.validation.languages;
 
 import com.codingelab.validation.errors.Error;
-/*
+/**
  * @author Abdulrahman Abdulhamid Alsaedi
  * @version 1.0.1
  */
-public class Arabic implements Language{
+class Arabic implements Language{
 	@Override
 	public String getVariable() {
 		return "";

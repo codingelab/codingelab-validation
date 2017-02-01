@@ -2,12 +2,12 @@
 
 import com.codingelab.validation.errors.Error;
 import com.codingelab.validation.errors.ErrorType;
-/*
+/**
  * @author Τρύφων Θεοδώρου
  * @author Abdulrahman Abdulhamid Alsaedi
- * @version 1.0.1
+ * @since 1.0.1
  */
-public class Greek implements Language{
+class Greek implements Language{
 	
 	@Override
 	public String getVariable() {

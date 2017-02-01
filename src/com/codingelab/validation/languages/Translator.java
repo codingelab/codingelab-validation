@@ -7,6 +7,7 @@ import com.codingelab.validation.errors.Error;
  * to the Language interface
  * @author Abdulrahman Abdulhamid Alsaedi
  * @since 1.0.1
+ * @see Language
  */
 public final class Translator{
 	public Language defaultLang;
@@ -20,6 +21,7 @@ public final class Translator{
 	 * @param variable allows the method to change the language variable
 	 * @param error which needed to be translated into readable language
 	 * @return String which is the translation of the error
+	 * @see Language
 	 */
 	public String translate(String variable,Error error){
 		if(error==null)return "";
