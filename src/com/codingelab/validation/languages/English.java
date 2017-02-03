@@ -32,11 +32,11 @@ class English implements Language{
 				return getVariable()+" length cannot be bigger than "+limit+" "+digit;
 			case 4://length not between
 				int [] between=(int [])error.get();
-				return getVariable()+ " length must be between this range: "
+				return getVariable()+ " length must be between "
 						+between[0]+" to "+between[1]+" characters";
 			case 5://length between
 				between=(int [])error.get();
-				return getVariable()+ " length must be out of this range: "
+				return getVariable()+ " length must not be between "
 				+between[0]+" to "+between[1]+" characters";
 			case 6://length not equal to one of
 				int [] allLengths=(int [])error.get();

@@ -220,9 +220,9 @@ public class Validator {
 	 * getName() is a predefined component<br/>
 	 * This method knows how to validate username. The rule of valid username are:<br>
 	 * <ul>
-	 * 		<li>Username only consists of letters and numbers.</li>
-	 * 		<li>Username has to be more than 3 characters.</li>
-	 * 		<li>Username has to be less than 17 characters.</li>
+	 * 		<li>Username only consists of English letters and numbers.</li>
+	 * 		<li>Username has to be between 4 to 16 characters.</li>
+	 * 		<li>Username must have 1 letter at least.</li>
 	 * </ul>
 	 * This method is equal to:<br/>
 	 *<pre>
@@ -235,8 +235,8 @@ public class Validator {
 	 */
 	public static StringValidation getUsername(){
 		try{
-			// TODO Fix the username (letterInRange:English letters only + numberInRange:0-9)
-			StringValidation validation=Validator.decorate(Regex.letters(),Regex.numbers());
+			Regex [] regex={Regex.lettersInRange("a-zA-Z",1),Regex.numbers()};
+			StringValidation validation=Validator.decorate(regex);
 			validation.setLengthBetween(4, 16);
 			return validation;
 		}catch (Exception e) {}
@@ -246,11 +246,11 @@ public class Validator {
 	 * getPassword() is a predefined component<br/>
 	 * This method knows how to validate password. The rule of valid password are:<br>
 	 * <ul>
-	 * 		<li>Password cannot have tabs, enters, and vertical spaces.</li>
 	 * 		<li>Password must have at least 2 letters.</li>
 	 * 		<li>Password must have at least 2 numbers.</li>
 	 * 		<li>Password must have at least 2 special characters.</li>
 	 * 		<li>Password consist of 8 characters at least.</li>
+	 * 		<li>Password cannot have tabs, enters, and vertical spaces.</li>
 	 * </ul>
 	 * This method is equal to:<br/>
 	 *<pre>
