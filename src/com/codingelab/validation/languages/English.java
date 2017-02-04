@@ -2,9 +2,9 @@ package com.codingelab.validation.languages;
 
 import com.codingelab.validation.errors.Error;
 import com.codingelab.validation.errors.ErrorType;
-/*
+/**
  * @author Abdulrahman Abdulhamid Alsaedi
- * @version 1.0.1
+ * @since 1.0.1
  */
 class English implements Language{
 	
