@@ -1,4 +1,5 @@
-/src/main/Demo.java
+/src/main/java/app/
 /bin/
-/test/
+/src/test/java/
 /extra-files/
+/target/
