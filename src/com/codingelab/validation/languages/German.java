@@ -20,6 +20,7 @@ package com.codingelab.validation.languages;
 
 import com.codingelab.validation.errors.Error;
 /**
+ * @author Jens Niemann
  * @author Abdulrahman Abdulhamid Alsaedi
  * @since 1.0.1
  */
