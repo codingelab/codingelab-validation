@@ -6,12 +6,14 @@
 	<version>1.2-rc-1</version>
 	<name>Codingelab Validation</name>
 	<description>Project responsible for data entry validation</description>
+
 	<licenses>
 		<license>
 			<name>Apache-2.0</name>
 			<url>http://apache.org/licenses/LICENSE-2.0.txt</url>
 		</license>
 	</licenses>
+
 	<developers>
 		<developer>
 			<name>Abdulrahman Abdulhamid Alsaedi</name>
@@ -45,11 +47,12 @@
 			</roles>
 		</contributor>
 	</contributors>
-	
-	
+
+
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.5.1</version>
 				<configuration>
@@ -59,8 +62,8 @@
 			</plugin>
 		</plugins>
 	</build>
-	
-	
+
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -69,5 +72,5 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
+
 </project>
