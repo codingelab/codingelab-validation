@@ -2,10 +2,51 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.codingelab</groupId>
-	<artifactId>Codingelab-Validation</artifactId>
+	<artifactId>validation</artifactId>
 	<version>1.2-rc-1</version>
-	<name>Codingelab validation</name>
+	<name>Codingelab Validation</name>
 	<description>Project responsible for data entry validation</description>
+	<licenses>
+		<license>
+			<name>Apache-2.0</name>
+			<url>http://apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>Abdulrahman Abdulhamid Alsaedi</name>
+			<email>425developer@gmail.com</email>
+			<roles>
+				<role>Developer</role>
+				<role>Designer</role>
+			</roles>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>Tryfon Theodorou</name>
+			<email>tryfonthe@gmail.com</email>
+			<roles>
+				<role>Supervisor</role>
+				<role>Greek Translator</role>
+			</roles>
+		</contributor>
+		<contributor>
+			<name>Prof. Claus kaldeich</name>
+			<email>claus.kaldeich@gmail.com</email>
+			<roles>
+				<role>Supervisor</role>
+			</roles>
+		</contributor>
+		<contributor>
+			<name>Jens Niemann</name>
+			<roles>
+				<role>German translator</role>
+			</roles>
+		</contributor>
+	</contributors>
+	
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -18,11 +59,15 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
 </project>
