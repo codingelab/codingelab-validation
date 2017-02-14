@@ -29,7 +29,7 @@ class Greek implements Language{
 	
 	@Override
 	public String getVariable() {
-		return "Στο πεδίο εισαγωγής ";
+		return "Στο πεδίο εισαγωγής";
 	}
 	
 	@Override
