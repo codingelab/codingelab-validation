@@ -35,9 +35,16 @@ import com.codingelab.validation.languages.Translator;
  * @param <T> the object which you will validate
  * @author Abdulrahman Abdulhamid Alsaedi
  * @since 1.0.1
+ * @see 
+ * @see
+ *  <ul>
+ * 		<li><a href='https://github.com/codingelab/validation'>Documentation</a></li>
+ * 		<li><a href='https://www.youtube.com/watch?v=yph8ga-Ciec&list=PLGPi5XFpVjY8iSuKXsA7lLQvwSEvvyFfj'>English Tutorial</a></li>
+ * 		<li><a href='https://www.youtube.com/watch?v=cWVJsD0xd5g&index=1&list=PLvZcoGWLT5r3I6NMmm8GQV1vk-oxPPEQA'>Arabic Tutorial</a></li>
+ * </ul>
  */
 public abstract class Validation<T> {
-	private static final String version="Codingelab Validation 1.0.1";
+	private static final String version="codingelab-validation-1.2-rc";
 	private Valid<T> valid;
 	private T input;
 	
